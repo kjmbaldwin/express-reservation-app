@@ -26,6 +26,10 @@ app.get("/tables", function(req, res) {
   res.sendFile(path.join(__dirname, "tables.html"));
 });
 
+app.get("/css", function(req, res){
+  res.sendFile(path.join(__dirname, "assets/style.css"));
+});
+
 app.get("/api/printres", function(req, res){ 
   res.json(reservations);  
 });
